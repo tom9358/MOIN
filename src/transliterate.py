@@ -3,7 +3,7 @@ import re
 def len_first_i(x: list):
     return -len(x[0])
 def load_dict(file: str)->dict:
-    with open(file) as f:
+    with open(file, encoding="utf-8") as f:
         dict_str = f.read()
         dict_str = dict_str.split("\n")
         dict = [tuple(pair.split(" ") if len(pair.split(" ")) != 1 else (pair,pair)) for pair in dict_str] # if a pair is unmatched, it replaces it with itself
