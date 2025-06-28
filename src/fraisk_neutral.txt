@@ -60,3 +60,10 @@ ooj ooi
 
 sk sch
 ğ g
+\bf v
+\bbef bev
+
+\bhir\b hier
+\bdäi\b dij
+\bus\b ons
+\ban\b aan
