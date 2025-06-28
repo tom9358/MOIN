@@ -27,6 +27,6 @@ with open("data/jungfraisk.txt", "r", encoding="utf-8") as file:
 print("original\n", text_jungfraisk)
 
 # load dictionary from text file
-oostfraisk = load_dict("./src/fraisk_neutral.txt")
+oostfraisk = load_dict("./src/fraisk_gronings.txt")
 
 print("\ntransliterated\n",transliterate(text_jungfraisk,oostfraisk))
