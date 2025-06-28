@@ -83,3 +83,4 @@ h' e
 \bun\b en
 \ban\b aan
 kweem kwam
+bün bin
