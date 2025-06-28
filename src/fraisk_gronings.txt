@@ -73,6 +73,7 @@ d' de
 'k k
 t' te
 s' ze
+h' e
 'n n
 
 \bno\b nou
