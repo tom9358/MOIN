@@ -12,7 +12,7 @@ ie ì
 ii ie
 îi ie
 o o
-oe or
+oe o
 oo oo
 oo(?=[b-df-hj-np-tv-z][aeiou]) o
 ôo oo
@@ -63,7 +63,22 @@ sk sch
 \bf v
 \bbef bev
 
+iğ\b eg
+
+t't t
+d't dt
+d'r der
+d' de
+'t t
+'k k
+t' te
+s' ze
+'n n
+
+\bno\b nou
 \bhir\b hier
 \bdäi\b dij
 \bus\b ons
+\bun\b en
 \ban\b aan
+kweem kwam
