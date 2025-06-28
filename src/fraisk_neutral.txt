@@ -4,7 +4,9 @@ aa aa
 e e
 äe è
 ee ee
+ee(?=[b-df-hj-np-tv-z][aeiou]) e
 êe ee
+êe(?=[b-df-hj-np-tv-z][aeiou]) e
 i i
 ie ì
 ii ie
@@ -12,7 +14,9 @@ ii ie
 o o
 oe or
 oo oo
-ôo
+oo(?=[b-df-hj-np-tv-z][aeiou]) o
+ôo oo
+ôo(?=[b-df-hj-np-tv-z][aeiou]) o
 ó oa
 óó oa
 óóe oa
@@ -27,7 +31,9 @@ uu oe
 ü u
 üe u
 üü uu
+üü(?=[b-df-hj-np-tv-z][aeiou]) u
 üüe uu
+üüe(?=[b-df-hj-np-tv-z][aeiou]) u
 ä aaie
 ää aaie
 âa aa
