@@ -1,55 +1,56 @@
 a a
-aa
-âa
-e
-äe
-ee
-êe
-i
-ie
+aa aa
+âa aa
+e e
+äe è
+ee ee
+êe ee
+i i
+ie ì
 ii ie
-îi
-o
-oe
-oo
+îi ie
+o o
+oe or
+oo oo
 ôo
-ó
+ó oa
 óó oa
-óóe
-u
-ue
-uu
-ûu
-ö
-öe
+óóe oa
+u ó
+ue oe
+uu oe
+ûu oe
+ö ö
+öe ö
 öö eu
-ööe
-ü
-üe
-üü
-üüe
-ä a
-ää
-
-ai
-aaj
-âaj
-au
-aau
-âau
-äi
-äie
-ei
-äj
-äej
-oi
-ooj
-ôoj
-óój
-óóej
-öj
-öej
-öy
-öye
+ööe eu
+ü u
+üe u
+üü uu
+üüe uu
+ä aaie
+ää aaie
+âa aa
+ai ai
+aaj aai
+âaj aai
+au ou
+aau aauw
+âau ou
+äi ai
+äie ai
+ei ij
+äj ij
+äej ij
+oi oi
+ooj ooi
+ôoj ooi
+óój oai
+óóej oaie
+öj ui
+öej uie
+öy ui
+öye ui
 
 sk sch
+ğ g
