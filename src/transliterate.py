@@ -1,5 +1,15 @@
 import re
 
+def swap_dict(infile: str, outfile: str):
+    with open(infile, encoding="utf-8") as f:
+        dict_str = f.read()
+        dict_str = dict_str.split("\n")
+        dict = [tuple(list(reversed(pair.split(" "))) if len(pair.split(" ")) != 1 else (pair,pair)) for pair in dict_str] # if a pair is unmatched, it replaces it with itself
+        outf = open(outfile, "w+", encoding="utf-8")
+        lines = [" ".join(pair) + "\n" for pair in dict]
+        outf.writelines(lines)
+        outf.close()
+
 def len_first_i(x: list):
     return -len(x[0])
 def load_dict(file: str)->dict:
@@ -20,13 +30,26 @@ def transliterate(text,dict):
         text = re.sub(chr(10330+i),match[1],text)
     return text
 
+import argparse
+parser = argparse.ArgumentParser(
+                    prog='MOIN',
+                    description='Transliterate between low german orthographies',
+                    epilog='specify filename and valid dictionary using -d')
+parser.add_argument('filename')           # positional argument
+parser.add_argument('-d', '--dict')      # option that takes a value
+args = parser.parse_args()
+
 # Read text from file
-with open("data/jungfraisk.txt", "r", encoding="utf-8") as file:
-    text_jungfraisk = file.read()
+try:
+    with open(args.filename, "r", encoding="utf-8") as file:
+        text = file.read()
 
-print("original\n", text_jungfraisk)
+    print("original\n", text)
 
-# load dictionary from text file
-oostfraisk = load_dict("./src/fraisk_gronings.txt")
+    # load dictionary from text file
+    dictionary = load_dict(args.dict)
 
-print("\ntransliterated\n",transliterate(text_jungfraisk,oostfraisk))
+    print("\ntransliterated\n",transliterate(text,dictionary))
+    
+except Exception as e:
+    print(f"An error occurred: {e}")
