@@ -1,4 +1,5 @@
 import re
+import argparse
 
 def swap_dict(infile: str, outfile: str):
     with open(infile, encoding="utf-8") as f:
@@ -12,7 +13,8 @@ def swap_dict(infile: str, outfile: str):
 
 def len_first_i(x: list):
     return -len(x[0])
-def load_dict(file: str)->dict:
+
+def load_dict(file: str) -> dict:
     with open(file, encoding="utf-8") as f:
         dict_str = f.read()
         dict_str = dict_str.split("\n")
@@ -30,7 +32,6 @@ def transliterate(text,dict):
         text = re.sub(chr(10330+i),match[1],text)
     return text
 
-import argparse
 parser = argparse.ArgumentParser(
                     prog='MOIN',
                     description='Transliterate between low german orthographies',
@@ -50,6 +51,6 @@ try:
     dictionary = load_dict(args.dict)
 
     print("\ntransliterated\n",transliterate(text,dictionary))
-    
+
 except Exception as e:
     print(f"An error occurred: {e}")

@@ -1,0 +1,29 @@
+oa å
+ie y
+z s
+sch sk
+aa a
+aauw ouw
+ee ea
+eu öä
+ai ey
+ou oo
+oo ou
+ui öö
+oe uu
+ó u
+aai ei
+uu üü
+u ü
+ì i
+ij ee
+eg\b ig
+
+\bt\b et
+\bm\b em
+\bn\b en
+\bk\b ik
+ern\b ren
+eln\b len
+
+fout fout
