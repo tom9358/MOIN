@@ -18,6 +18,7 @@ u ü
 ì i
 ij ee
 eg\b ig
+ege\b ige\b
 
 \bt\b et
 \bm\b em
@@ -25,5 +26,8 @@ eg\b ig
 \bk\b ik
 ern\b ren
 eln\b len
+
+ies\b isk
+iese\b iske
 
 fout fout
