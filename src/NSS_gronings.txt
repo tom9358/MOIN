@@ -1,0 +1,55 @@
+å oa
+aa oa
+y ie
+sk sch
+
+#\bs z
+ouw aauw
+
+ea ee
+ee ai
+ey ai
+eyr eer
+eer eer
+
+ei aai
+ouw aauw
+auw aauw
+
+öä eu
+öy eu
+öö ui
+
+oi ui
+ooi ooi
+
+oo ou
+ou oo
+oa oo
+
+uu oe
+üü uu
+
+# u ó
+ü u
+
+in ìn
+ing ing
+
+ig\b eg
+ige\b ege
+
+\bet\b t
+\bem\b m
+
+ren\b ern
+len\b eln
+
+isk\b ies
+iske\b iese
+
+fout fout
+\bhevt\b het
+\bhad\b haar
+
+noch\b nog
