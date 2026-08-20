@@ -1,6 +1,7 @@
 # splits text into syllables
 import pyphen
 
+
 def syllabify(text: str, lang: str = "nl_NL") -> str:
     """
     Splits the input text into syllables based on the specified language.
@@ -15,7 +16,6 @@ def syllabify(text: str, lang: str = "nl_NL") -> str:
 # print(syllabify(input("Enter text to syllabify: ")))
 
 # Entirely vibecoded manual syllabification for Dutch:
-import re
 def syllabify_manual(text: str) -> str:
     """
     Dutch syllabification:
