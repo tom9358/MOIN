@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ('óóii', 'óó-ii'),
     ('óóee', 'óó-ee'),
@@ -472,6 +474,7 @@ REPLACEMENTS: tuple[tuple[str, str], ...] = (
     ("s'", 'ze'),
     ("t't", 't'),
     ("'t", 't'),
+    ("'T", 't'),
     ("t'", 'te'),
     ("w'", 'we'),
     ("d'r", 'der'),
@@ -489,6 +492,7 @@ REPLACEMENTS: tuple[tuple[str, str], ...] = (
     (' f', ' v'),
     ('"f', '"v'),
     (' s', ' z'),
+    ('hir', 'hier'),
     (' zl', ' sl'),
     (' zt', ' st'),
     (' zp', ' sp'),
@@ -503,6 +507,38 @@ def transliterate(text: str) -> str:
     """Apply the hardcoded rules to an input string."""
     for old, new in REPLACEMENTS:
         text = text.replace(old, new)
+    text = text.replace('üü', 'u')
+    text = re.sub(r'uu(?=[^aeiouyáéíóúäëïöüâêîôûèìòù][aeiouyáéíóúäëïöüâêîôûèìòù])', 'u', text)
+    text = re.sub(r'oo(?=[^aeiouyáéíóúäëïöüâêîôûèìòù][aeiouyáéíóúäëïöüâêîôûèìòù])', 'o', text)
+    text = re.sub(r'ee(?=[^aeiouyáéíóúäëïöüâêîôûèìòù][aeiouyáéíóúäëïöüâêîôûèìòù])', 'e', text)
+    text = re.sub(r'aa(?=r[aeiouyáéíóúäëïöüâêîôûèìòù])', 'a', text)
+    text = text.replace('aaa', 'ää')
+    text = text.replace('ääier', 'äär')
+    text = re.sub(r'oe(?=rg)', 'ó', text)
+    text = re.sub(r'oe(?=r[dt])', 'ó', text)
+    text = re.sub(r'nn(?=e)', 'nd', text)
+    text = re.sub(r'ven\b', 'vent', text)
+    text = re.sub(r'ent\b', 'en', text)
+    text = re.sub(r'\bsk', 'sch', text)
+    text = re.sub(r'\bdor\b', 'doar', text)
+    text = re.sub(r'\bwor\b', 'woar', text)
+    text = re.sub(r'(^|[.!?]\s+)([tnk])\s+([a-záéíóúäëïöüâêîôûèìòù])',
+                  lambda match: f'{match.group(1)}{match.group(2)} '
+                  f'{match.group(3).upper()}', text)
+    text = text.replace('oez', 'oes')
+    text = re.sub(r'\bde(?=\s+in)', 'dee', text)
+    text = re.sub(r'\bsai\b', 'zai', text)
+    text = re.sub(r'\bsö', 'zö', text)
+    text = text.replace('ğ', 'g')
+    text = re.sub(r'ig\b', 'eg', text)
+    text = text.replace('okk', 'ok')
+    text = text.replace('ss', 'zz')
+    text = text.replace('zzij', 'szij')
+    text = re.sub(r'gg(?=e)', 'g', text)
+    text = text.replace('zzer', 'zze')
+    text = re.sub(r'(?<=[aeiou])f(?=[aeiou])', 'v', text)
+    text = re.sub(r'(?<=[aeiou])s(?=[aeiou])', 'z', text)
+    text = re.sub(r'öe([bcdfghjklmnpqrstvwxyz])([bcdfghjklmnpqrstvwxyz])', r'ö\1\2e', text)
     return text
 
 if __name__ == '__main__':
