@@ -1,1 +1,8 @@
 .vscode
+.venv
+
+# data folders for byt5moin
+byt5moin/data/
+byt5moin/runs/
+byt5moin/grn-jfr/
+byt5moin/onnx/
